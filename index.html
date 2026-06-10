@@ -35,7 +35,6 @@
     cursor: none;
   }
 
-  /* CUSTOM CURSOR */
   #cursor {
     position: fixed;
     width: 12px; height: 12px;
@@ -57,7 +56,6 @@
     transform: translate(-50%, -50%);
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -88,7 +86,6 @@
   }
   .nav-links a:hover { color: var(--cyan); }
 
-  /* HERO */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -242,7 +239,6 @@
     background: linear-gradient(to right, var(--cyan), transparent);
   }
 
-  /* SECTIONS */
   section { padding: 110px 60px; }
   .section-tag {
     font-size: 0.72rem;
@@ -260,7 +256,6 @@
     margin-bottom: 52px;
   }
 
-  /* ABOUT */
   #about { background: var(--slate); }
   .about-grid {
     display: grid;
@@ -276,7 +271,6 @@
   }
   .about-text p strong { color: var(--white); font-weight: 500; }
 
-  /* SKILL CATEGORIES */
   .skill-categories { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
   .skill-cat-label {
     font-size: 0.7rem;
@@ -335,7 +329,6 @@
   .about-badge .big { font-size: 1.6rem; display: block; line-height: 1; }
   .about-badge .small { font-size: 0.72rem; font-weight: 500; }
 
-  /* ACHIEVEMENTS */
   #achievements { background: var(--navy); }
   .achievement-grid {
     display: grid;
@@ -383,7 +376,6 @@
     display: block;
   }
 
-  /* CERTIFICATES */
   .cert-section-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
@@ -407,7 +399,7 @@
     gap: 16px;
     align-items: center;
     transition: all 0.2s;
-    cursor: none;
+    cursor: pointer;
     text-decoration: none;
     color: inherit;
   }
@@ -448,7 +440,6 @@
     flex-shrink: 0;
   }
 
-  /* PROJECTS */
   #projects { background: var(--slate); }
   .projects-grid {
     display: grid;
@@ -461,7 +452,7 @@
     border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    cursor: none;
+    cursor: pointer;
   }
   .project-card:hover {
     transform: translateY(-8px);
@@ -517,7 +508,6 @@
   }
   .project-link:hover { gap: 8px; }
 
-  /* EDUCATION / TIMELINE */
   #education { background: var(--navy); }
   .timeline { max-width: 680px; }
   .timeline-item {
@@ -569,7 +559,6 @@
   }
   .timeline-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.75; }
 
-  /* CONTACT */
   #contact {
     background: var(--slate);
     text-align: center;
@@ -596,7 +585,7 @@
     font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.2s;
-    cursor: none;
+    cursor: pointer;
   }
   .contact-chip:hover {
     color: var(--cyan);
@@ -614,7 +603,6 @@
   }
   footer p { font-size: 0.78rem; color: var(--muted); }
 
-  /* SCROLL REVEAL */
   .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -643,9 +631,8 @@
 <div id="cursor"></div>
 <div id="cursor-glow"></div>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="logo">RA.</a>
+  <a href="#hero" class="logo">RA.</a>
   <ul class="nav-links">
     <li><a href="#about">Tentang</a></li>
     <li><a href="#achievements">Prestasi</a></li>
@@ -655,7 +642,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="grid-overlay"></div>
@@ -694,7 +680,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
     <div class="about-text reveal">
@@ -703,7 +688,6 @@
       <p>Halo! Saya <strong>Rizki Andriano</strong>, mahasiswa <strong>S1 Sistem Informasi</strong> di <strong>UIN Raden Intan Lampung</strong> angkatan 2023. Saya memiliki passion kuat di bidang desain dan teknologi.</p>
       <p>Saya berfokus pada tiga bidang utama: <strong>UI/UX Design</strong> — menciptakan antarmuka yang ramah pengguna; <strong>Desain Grafis</strong> — membangun identitas visual yang kuat; dan <strong>Internet of Things</strong> — menghubungkan dunia fisik dengan digital.</p>
       <p>Prestasi terbesar saya adalah meraih <strong>Juara Lomba UI/UX tingkat Provinsi Lampung</strong> — bukti bahwa desain yang baik bisa berbicara sendiri.</p>
-
       <div class="skill-categories">
         <div>
           <div class="skill-cat-label">UI/UX Design</div>
@@ -747,14 +731,11 @@
   </div>
 </section>
 
-<!-- ACHIEVEMENTS & CERTIFICATES -->
 <section id="achievements">
   <div class="reveal">
     <div class="section-tag">Prestasi & Sertifikat</div>
     <h2>Pencapaian yang<br>saya banggakan.</h2>
   </div>
-
-  <!-- Achievements -->
   <div class="achievement-grid reveal">
     <div class="achievement-card">
       <div class="achievement-icon">🏆</div>
@@ -781,13 +762,10 @@
       </div>
     </div>
   </div>
-
-  <!-- Certificates -->
   <div class="reveal">
     <div class="cert-section-title">📜 Sertifikat & Pelatihan</div>
     <div class="cert-grid">
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-uiux">🖥️</div>
         <div class="cert-info">
           <div class="cert-name">UI Design</div>
@@ -795,8 +773,7 @@
         </div>
         <div class="cert-date">2026</div>
       </a>
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-uiux">📐</div>
         <div class="cert-info">
           <div class="cert-name">UI/UX For Dumy</div>
@@ -804,8 +781,7 @@
         </div>
         <div class="cert-date">2025</div>
       </a>
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-design">🎨</div>
         <div class="cert-info">
           <div class="cert-name">Graphic Design Essentials</div>
@@ -813,8 +789,7 @@
         </div>
         <div class="cert-date">2023</div>
       </a>
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-design">✏️</div>
         <div class="cert-info">
           <div class="cert-name">Brand Identity Design</div>
@@ -822,8 +797,7 @@
         </div>
         <div class="cert-date">2023</div>
       </a>
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-iot">🔌</div>
         <div class="cert-info">
           <div class="cert-name">IoT dengan Arduino & ESP32</div>
@@ -831,8 +805,7 @@
         </div>
         <div class="cert-date">2025</div>
       </a>
-
-      <a href="#" class="cert-card">
+      <a href="#" class="cert-card" onclick="return false;">
         <div class="cert-badge cb-award">🏆</div>
         <div class="cert-info">
           <div class="cert-name">Juara 2 UI/UX — Provinsi Lampung</div>
@@ -840,7 +813,6 @@
         </div>
         <div class="cert-date">2025</div>
       </a>
-
     </div>
     <p style="color: var(--muted); font-size: 0.82rem; margin-top: 16px;">
       💡 Klik kartu sertifikat untuk melihat detail atau dokumen asli.
@@ -848,14 +820,12 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="reveal">
     <div class="section-tag">Portofolio Karya</div>
     <h2>Proyek yang<br>pernah saya kerjakan.</h2>
   </div>
   <div class="projects-grid">
-
     <div class="project-card p1 reveal">
       <div class="project-img">
         <div class="project-img-bg">📱</div>
@@ -869,12 +839,11 @@
         <div class="project-title">GrowPath app</div>
         <p class="project-desc">Desain UI/UX aplikasi mobile layanan akademik mahasiswa UIN RIL — fitur absensi, jadwal, dan info kampus dalam satu genggaman. Karya yang memenangkan lomba Provinsi Lampung.</p>
         <div class="project-links">
-          <a href="#" class="project-link">Lihat Figma →</a>
-          <a href="#" class="project-link">Case Study →</a>
+          <a href="#" class="project-link" onclick="return false;">Lihat Figma →</a>
+          <a href="#" class="project-link" onclick="return false;">Case Study →</a>
         </div>
       </div>
     </div>
-
     <div class="project-card p2 reveal">
       <div class="project-img">
         <div class="project-img-bg">🌿</div>
@@ -888,12 +857,11 @@
         <div class="project-title">Smart City</div>
         <p class="project-desc">Sistem monitoring kota pintar berbasis IoT menggunakan Arduino UNO, ESP32, sensor untuk mendeteksi gempa maupun banjir, dan suhu. Data dikirim real-time ke dashboard web yang didesain dengan tampilan bersih.</p>
         <div class="project-links">
-          <a href="#" class="project-link">Lihat Demo →</a>
-          <a href="#" class="project-link">GitHub →</a>
+          <a href="#" class="project-link" onclick="return false;">Lihat Demo →</a>
+          <a href="#" class="project-link" onclick="return false;">GitHub →</a>
         </div>
       </div>
     </div>
-
     <div class="project-card p3 reveal">
       <div class="project-img">
         <div class="project-img-bg">🏪</div>
@@ -907,16 +875,14 @@
         <div class="project-title">Branding IG Kampus/Fakultas</div>
         <p class="project-desc">Identitas visual lengkap untuk Fakultas Saintek UIN Raden Intan Lampung — logo, color palette, tipografi, dan aset media sosial yang konsisten.</p>
         <div class="project-links">
-          <a href="#" class="project-link">Lihat Karya →</a>
-          <a href="#" class="project-link">Behance →</a>
+          <a href="#" class="project-link" onclick="return false;">Lihat Karya →</a>
+          <a href="#" class="project-link" onclick="return false;">Behance →</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="reveal">
     <div class="section-tag">Pendidikan</div>
@@ -942,36 +908,34 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner reveal">
     <div class="section-tag">Kontak</div>
     <h2>Mari berkolaborasi!</h2>
     <p>Punya proyek desain, ide kreatif, atau ingin berdiskusi tentang UI/UX dan IoT? Saya senang mendengarnya!</p>
-    <a href="rizkiandriano79@gmail.com" class="btn btn-primary" style="display:inline-flex;">
+    <a href="mailto:rizkiandriano79@gmail.com" class="btn btn-primary" style="display:inline-flex;" target="_blank" rel="noopener noreferrer">
       Kirim Email ↗
     </a>
-    <!-- JADI INI -->
-<div class="contact-links">
-  <a href="#" class="contact-chip">
-    <span class="icon">💼</span> LinkedIn
-  </a>
-  <a href="#" class="contact-chip">
-    <span class="icon">🎨</span> Behance
-  </a>
-  <a href="https://www.instagram.com/andrynsven?igsh=aTVjeDBkeW4zaGQ2" 
-     class="contact-chip" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    <span class="icon">📸</span> Instagram
-  </a>
-  <a href="#" class="contact-chip">
-    <span class="icon">📄</span> CV / Resume
-  </a>
-</div>
+    <div class="contact-links">
+      <a href="#" class="contact-chip" onclick="return false;">
+        <span class="icon">💼</span> LinkedIn
+      </a>
+      <a href="#" class="contact-chip" onclick="return false;">
+        <span class="icon">🎨</span> Behance
+      </a>
+      <a href="https://www.instagram.com/andrynsven?igsh=aTVjeDBkeW4zaGQ2"
+         class="contact-chip"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="icon">📸</span> Instagram
+      </a>
+      <a href="#" class="contact-chip" onclick="return false;">
+        <span class="icon">📄</span> CV / Resume
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Rizki Andriano · S1 Sistem Informasi UIN Raden Intan Lampung</p>
   <p>Dibuat dengan ❤️ di Lampung</p>
@@ -1023,7 +987,6 @@
   }, { threshold: 0.08 });
   reveals.forEach(r => observer.observe(r));
 
-  // Stagger project cards
   document.querySelectorAll('.project-card').forEach((card, i) => {
     card.style.transitionDelay = (i * 0.08) + 's';
   });
